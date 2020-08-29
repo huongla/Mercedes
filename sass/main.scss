@@ -1,0 +1,20 @@
+//Helper: biến phải tạo ra đầu tiên
+@import './Helper/variables';
+@import './Helper/mixin';
+
+//Vendor
+//chỉ import file có đuôi scss
+//file css thì import bên html
+
+//Base
+@import './Base/reset';
+@import './Base/customizes';
+
+//Components
+@import './Components/button';
+
+//Layouts
+
+//Page
+
+//Theme: bắt buộc nằm cuối cùng

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-darks {
+  border: 1px solid #333;
+  background-color: #333;
+  padding: 1.6rem 3.1rem 0.6rem;
+  border-radius: 1px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.btn-darks:hover {
+  border-color: #1f1f1f;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.btn-blue {
+  border: 1px solid #00adef;
+  background-color: #00adef;
+  padding: -0.4rem 3.1rem 0.6rem;
+  border-radius: 1px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.btn-blue:hover {
+  border-color: #0088c6;
+  background-color: #0088c6;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
