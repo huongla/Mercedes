@@ -1,0 +1,19 @@
+.carousel {
+    .carousel__items{
+        height: 700px;
+        background-size: cover;
+        background-position: center;
+       
+        display: flex;
+        position: relative;
+        .carousel__overlay{
+            position: absolute;
+            top:10%;
+            left:5%;
+            width: 35%;
+        }
+    }
+    .item1{
+        background-image: url("../img/carousel-01-3400x1440.jpeg");
+    }
+}

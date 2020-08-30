@@ -44,13 +44,14 @@ $pd-2: 12px;
 $pd-3: 31px;
 
 //variable margin
-$mg-0: 11px;
+$mg-0: 10px;
 $mg-1: 14px; //default
 $mg-2: 25px;
 $mg-3: 40px;
 
 //break points
 $breakpoints:(
+    'ex-extra-large': 1280px,
     'extra-large': 1200px,
     'large' : 992px,
     'medium' : 768px,
