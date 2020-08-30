@@ -1,16 +1,24 @@
 .carousel {
+   position: relative;
+   margin-top: 100px;
+//    z-index: 2;
     .carousel__items{
         height: 700px;
         background-size: cover;
         background-position: center;
-       
         display: flex;
         position: relative;
         .carousel__overlay{
             position: absolute;
             top:10%;
-            left:5%;
-            width: 35%;
+            left:8%;
+            width: 45%;
+            h1{
+                font-size: $fs-5;
+                line-height: 1.5;
+                margin-bottom: $mg-1;
+            }
+            
         }
     }
     .item1{

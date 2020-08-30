@@ -5,7 +5,7 @@
 }
 
 html, body {
-  background: #000;
+  background: #000000;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 14px;
@@ -20,11 +20,12 @@ a:hover {
 .btn-darks {
   border: 1px solid #333;
   background-color: #333;
-  padding: 7px 31px 6px;
+  padding: 7px 20px 6px;
   border-radius: 1px;
-  color: #fff;
-  font-size: 16px;
+  color: #ddd;
+  font-size: 14px;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .btn-darks:hover {
@@ -36,17 +37,27 @@ a:hover {
 .btn-blue {
   border: 1px solid #00adef;
   background-color: #00adef;
-  padding: 5px 31px 6px;
+  padding: 5px 20px 6px;
   border-radius: 1px;
   color: #fff;
   font-size: 16px;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .btn-blue:hover {
   border-color: #0088c6;
   background-color: #0088c6;
   color: #fff;
+}
+
+header {
+  padding-bottom: 12px;
+  background: #000000;
+}
+
+header .navbar {
+  align-items: flex-end;
 }
 
 header .navbar .header__right .nav-item {
@@ -74,6 +85,16 @@ header .navbar .header__right .nav-item a:hover i {
   border: 1px solid #00adef;
 }
 
+header .navbar .header__right .header__meta {
+  margin: 0;
+}
+
+header .navbar .header__right .header__menu {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
 header .navbar .header__right .header__menu .nav-item {
   margin-left: 25px;
 }
@@ -83,31 +104,38 @@ header .navbar .header__right .header__menu .search__icon {
   cursor: pointer;
 }
 
+#navbarMecedes {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 99;
+}
+
 @media screen and (max-width: 1280px) {
   header .header__menu .navbar-nav {
     display: none;
   }
-  header .navbar-expand-lg .navbar-toggler {
-    display: block;
-    margin-bottom: 10px;
+  header .header__menu .navbar-toggler {
+    display: inline-block;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .navbar .header__left img.header__logo-notext {
+@media screen and (max-width: 992px) {
+  header .navbar .header__left .navbar-brand .header__logo-notext {
     width: 44px;
     height: 44px;
   }
-  .navbar .header__left img.header__logo-text {
+  header .navbar .header__left .navbar-brand .header__logo-text {
     width: 91px;
     height: 23px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .header__meta-text {
-    display: none;
-  }
+.carousel {
+  position: relative;
+  margin-top: 100px;
 }
 
 .carousel .carousel__items {
@@ -121,8 +149,14 @@ header .navbar .header__right .header__menu .search__icon {
 .carousel .carousel__items .carousel__overlay {
   position: absolute;
   top: 10%;
-  left: 5%;
-  width: 35%;
+  left: 8%;
+  width: 45%;
+}
+
+.carousel .carousel__items .carousel__overlay h1 {
+  font-size: 40px;
+  line-height: 1.5;
+  margin-bottom: 14px;
 }
 
 .carousel .item1 {

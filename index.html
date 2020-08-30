@@ -30,17 +30,17 @@
 
 <body>
   <!-- HEADER -->
-  <header>
+  <header id="navbarMecedes">
     <nav class="navbar navbar-expand-lg navbar-dark py-0">
-      <div class="col-lg-3 col-xl-4 header__left">
+      <div class="col-md-3 col-lg-3 header__left">
         <a class="navbar-brand" href="">
           <img class="header__logo-notext mt-3 ml-1" src="./img/logo.svg" alt="">
           <img class="header__logo-text ml-5 mb-2 align-bottom" src="./img/brand-without-claim.svg" alt="">
         </a>
       </div>
-      <div class="col-lg-9 col-xl-8 header__right">
-        <div class="row header__meta justify-content-end">
-          <ul class="navbar-nav">
+      <div class="col-md-9 col-lg-9 header__right">
+        <div class="row header__meta justify-content-end pr-1">
+          <ul class="navbar-nav row1">
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="fa fa-info mr-2 align-text-top"></i>
@@ -55,7 +55,7 @@
             </li>
           </ul>
         </div>
-        <div class="row header__menu justify-content-end mr-2 mt-4 collapse navbar-collapse" id="navbarNav">
+        <div class="row header__menu justify-content-end mt-4 collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">Company</a>
@@ -85,12 +85,13 @@
           <span class="search__icon">
             <i class="fa fa-search"></i>
           </span>
-        </div>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          <button class="navbar-toggler align-bottom" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+        </div>
+      </div>
+      
     </nav>
   </header>
 
@@ -107,6 +108,7 @@
       </div>
     </div>
   </section>
+
   <section class="search"></section>
   <section class="welcome"></section>
   <section class="channel"></section>
@@ -130,18 +132,17 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
   <script>
-    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    // var prevScrollpos = window.pageYOffset;
-    // window.onscroll = function () {
-    //   var currentScrollPos = window.pageYOffset;
-    //   if (prevScrollpos > currentScrollPos) {
-    //     document.getElementById("navbar").style.top = "0";
-    //   } else {
-    //     document.getElementById("navbar").style.top = "-50px";
-    //   }
-    //   prevScrollpos = currentScrollPos;
-    // }
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("navbarMecedes").style.top = "-100px";
+      } else {
+        document.getElementById("navbarMecedes").style.top = "0";
+      }
+    }
   </script>
 </body>
 
