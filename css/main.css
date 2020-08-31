@@ -110,7 +110,7 @@ header .navbar .header__right .header__menu .search__icon {
   width: 100%;
   display: block;
   transition: top 0.3s;
-  z-index: 99;
+  z-index: 9;
 }
 
 @media screen and (max-width: 1280px) {
@@ -150,16 +150,74 @@ header .navbar .header__right .header__menu .search__icon {
   position: absolute;
   top: 10%;
   left: 8%;
-  width: 45%;
+  width: 43%;
 }
 
-.carousel .carousel__items .carousel__overlay h1 {
-  font-size: 40px;
+.carousel .carousel__items .carousel__overlay a {
+  color: #fff;
+}
+
+.carousel .carousel__items .carousel__overlay a h1 {
+  font-size: 42px;
   line-height: 1.5;
   margin-bottom: 14px;
 }
 
 .carousel .item1 {
   background-image: url("../img/carousel-01-3400x1440.jpeg");
+}
+
+.carousel .item2 {
+  background-image: url("../img/carousel-02-3400x1440.jpeg");
+}
+
+.carousel .item3 {
+  background-image: url("../img/carousel-03-3400x1440.jpeg");
+}
+
+.carousel .item4 {
+  background-image: url("../img/carousel-04-3400x1440.jpeg");
+}
+
+.carousel .item5 {
+  background-image: url("../img/carousel-05-3400x1440.jpeg");
+}
+
+.carousel .item6 {
+  background-image: url("../img/carousel-06-3400x1440.jpeg");
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-100%);
+  color: white;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover {
+  background: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-100%);
+  color: white;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover {
+  background: none;
+}
+
+.owl-carousel .owl-nav button.owl-next:focus {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

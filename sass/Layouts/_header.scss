@@ -46,7 +46,7 @@ header {
     width: 100%;
     display: block;
     transition: top 0.3s;
-    z-index: 99;
+    z-index: 9;
 }
 //responsive
 @include responsive("ex-extra-large") {

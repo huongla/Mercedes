@@ -1,27 +1,72 @@
 .carousel {
-   position: relative;
-   margin-top: 100px;
-//    z-index: 2;
-    .carousel__items{
+    position: relative;
+    margin-top: 100px;
+    .carousel__items {
         height: 700px;
         background-size: cover;
         background-position: center;
         display: flex;
         position: relative;
-        .carousel__overlay{
+        .carousel__overlay {
             position: absolute;
-            top:10%;
-            left:8%;
-            width: 45%;
-            h1{
-                font-size: $fs-5;
-                line-height: 1.5;
-                margin-bottom: $mg-1;
+            top: 10%;
+            left: 8%;
+            width: 43%;
+            a {
+                color: $color-white-0;
+                h1 {
+                    font-size: $fs-5 + 2;
+                    line-height: 1.5;
+                    margin-bottom: $mg-1;
+                }
             }
-            
         }
     }
-    .item1{
+    .item1 {
         background-image: url("../img/carousel-01-3400x1440.jpeg");
     }
+    .item2 {
+        background-image: url("../img/carousel-02-3400x1440.jpeg");
+    }
+    .item3 {
+        background-image: url("../img/carousel-03-3400x1440.jpeg");
+    }
+    .item4 {
+        background-image: url("../img/carousel-04-3400x1440.jpeg");
+    }
+    .item5 {
+        background-image: url("../img/carousel-05-3400x1440.jpeg");
+    }
+    .item6 {
+        background-image: url("../img/carousel-06-3400x1440.jpeg");
+    }
 }
+.owl-carousel .owl-nav button.owl-prev{
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-100%);
+    color: white;
+    &:hover{
+        background: none;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.owl-carousel .owl-nav button.owl-next{
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-100%);
+    color: white;
+    &:hover{
+        background: none;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
