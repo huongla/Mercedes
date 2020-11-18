@@ -9,6 +9,8 @@ $color-black-4: #1f1f1f;
 
 $color-white-0: #fff;
 $color-white-1: #ddd;
+$color-white-2: #f4f4f4;
+$color-white-3: #ececec;
 
 $color-gray-0:  #ccc;
 $color-gray-1: #999;
@@ -44,6 +46,7 @@ $pd-1: 6px;
 $pd-2: 12px;
 $pd-3: 20px;
 $pd-4: 31px;
+$pd-5: 60px;
 
 //variable margin
 $mg-0: 10px;
@@ -55,6 +58,7 @@ $mg-3: 40px;
 $breakpoints:(
     'ex-extra-large': 1280px,
     'extra-large': 1200px,
+    'ex-large': 1020px,
     'large' : 992px,
     'medium' : 768px,
     'small' : 576px,

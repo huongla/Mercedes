@@ -1,2 +1,0 @@
-# mercedes
-homework: mercedes

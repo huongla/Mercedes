@@ -1,41 +1,71 @@
 header {
-    padding-bottom: $pd-2;
     background: $color-black-0;
+    // background: $color-pink-0;
     .navbar {
-        align-items: flex-end;
+        align-items: flex-start;
+        padding: 0 $pd-3 $pd-2 0;
         .header__right {
-            .nav-item {
-                display: inline;
-                a {
-                    @include styleText($color-white-0, $fs-2, $fw-normal);
-                    i {
-                        font-size: $fs-0;
-                        border: 1px solid $color-white-0;
-                        padding: 3px 4px;
-                        text-align: center;
-                    }
-                    &:hover {
-                        color: $color-blue-0;
-                        i {
-                            border: 1px solid $color-blue-0;
+            .header__meta{
+                margin: 0;
+                .navbar-nav{
+                    flex-direction:row;
+                    align-self: baseline;
+                    .nav-item {
+                        display: inline;
+                        a {
+                            @include styleText($color-white-0, $fs-2, $fw-normal);
+                            i {
+                                font-size: $fs-0;
+                                border: 1px solid $color-white-0;
+                                padding: 3px 4px;
+                                text-align: center;
+                            }
+                            &:hover {
+                                color: $color-blue-0;
+                                i {
+                                    border: 1px solid $color-blue-0;
+                                }
+                            }
                         }
                     }
                 }
             }
-            .header__meta{
-                margin: 0;
-            }
             .header__menu {
-                margin-left:0;
-                margin-right: 0;
-                padding:0;
-                .nav-item {
-                    margin-left: $mg-2;
+                justify-content: flex-start;
+                padding-top: $pd-3;
+                padding-right: $pd-2;
+                .navbar-nav{
+                    flex-direction:row;
+                    align-self: baseline;
+                    .nav-item {
+                        margin-left: $mg-2;
+                        display: inline;
+                        a {
+                            @include styleText($color-white-0, $fs-2, $fw-normal);
+                            i {
+                                font-size: $fs-0;
+                                border: 1px solid $color-white-0;
+                                padding: 3px 4px;
+                                text-align: center;
+                            }
+                            &:hover {
+                                color: $color-blue-0;
+                                i {
+                                    border: 1px solid $color-blue-0;
+                                }
+                            }
+                        }
+                    }
                 }
                 .search__icon {
                     margin-left: $mg-2;
+                    align-self: center;
                     cursor: pointer;
+                    &:hover{
+                        color: $color-blue-0;
+                    }
                 }
+                
             }
         }
     }
@@ -45,42 +75,102 @@ header {
     top: 0px;
     width: 100%;
     display: block;
-    transition: top 0.3s;
-    z-index: 9;
+    transition: top 0.5s;
+    z-index: 99;
 }
 //responsive
 @include responsive("ex-extra-large") {
     header {
-        .header__menu {
-            .navbar-nav {
-                display: none;
-            }
-            .navbar-toggler {
-                display: inline-block;
-            }
-        }
-    }
-}
-@include responsive("large") {
-    header{
         .navbar{
-            .header__left {
-                .navbar-brand {
-                    .header__logo-notext {
-                        width: 44px;
-                        height: 44px;
+            padding: 0 0 $pd-0 0;
+            .header__right{
+                .header__menu {
+                    .navbar-nav {
+                        display: none;
                     }
-                    .header__logo-text {
-                        width: 91px;
-                        height: 23px;
+                    .navbar-toggler {
+                        display: inline-block;
+                        &:hover{
+                            color: $color-blue-0;
+                        }
+                    }
+                    button{
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    .search__icon{
+                        margin-right: $mg-0;
+                        outline: none;
+                    }
+                }
+
+            }
+            #closeBtn{
+                display: none;
+                i{
+                    color: $color-white-0;
+                    font-size: $fs-3;
+                    &:hover{
+                        color:$color-blue-0;
                     }
                 }
             }
+            
+        }
+        .navbar-dark{
+            .navbar-toggler {
+                border: none;
+            }
         }
     }
 }
+
+@include responsive("ex-large") {
+    header{
+        .navbar{
+            padding: 0 0 $pd-0 0;
+            .header__left {
+                align-items: flex-end;
+                .navbar-brand {
+                    align-items: flex-end;
+                    .header__logo-notext {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    .header__logo-text {
+                        width: 119px;
+                        height: 30px;
+                    }
+                }
+            }
+            .header__right{
+                .header__menu{
+                    padding-top: $pd-1;
+                    
+                    
+                }
+            }
+        }
+        
+    }
+}
 @include responsive("medium") {
-    // .header__meta-text {
-    //     display: none;
-    // }
+    .header__meta-text {
+        display: none;
+    }
+    .header__left {
+        align-items: flex-end;
+        .navbar-brand {
+            align-items: flex-end;
+            .header__logo-notext {
+                width: 44px;
+                height: 44px;
+            }
+            .header__logo-text {
+                width: 91px;
+                height: 23px;
+            }
+        }
+    }
 }

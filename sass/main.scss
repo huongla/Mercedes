@@ -2,6 +2,7 @@
 @import './Helper/variables';
 @import './Helper/mixin';
 
+
 //Vendor
 //chỉ import file có đuôi scss
 //file css thì import bên html
@@ -15,8 +16,15 @@
 
 //Layouts
 @import './Layouts/header';
+@import './Layouts/menuSide';
+@import './Layouts/menuRight';
+@import './Layouts/menuBottom';
 @import './Layouts/carousel';
+@import './Layouts/search';
+@import './Layouts/welcome';
+@import './Layouts/channel';
 
 //Page
 
 //Theme: bắt buộc nằm cuối cùng
+@import './Helper/animation';

@@ -1,0 +1,38 @@
+.search{
+    background: $color-black-1;
+    .search__content{
+        padding-top: $pd-3 + 3;
+        padding-bottom: $pd-4;
+        .form-inline{
+            width: 100%;
+            .input-group{
+                width: 100%;
+                padding: $pd-0;
+                background: $color-white-3;
+                .form-control{
+                    border: none;
+                    background: $color-white-3;
+                    &:not(:last-child){
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                    &:focus{
+                        box-shadow: none;
+                    }
+                }
+                .input-group-prepend{
+                    .input-group-text{
+                        background: $color-white-3;
+                        border: none;
+                        padding-left: $pd-3;
+                        padding-right: $pd-3;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            
+        } 
+    }
+}
+

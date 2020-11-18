@@ -7,21 +7,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- FONT GOOGLE -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
 
-  <!-- OWL CAROUSEL -->
-  <link rel="stylesheet" href="./css/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <!-- OWL ANIMATION -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 
   <!-- CSS -->
@@ -29,21 +26,22 @@
 </head>
 
 <body>
+
   <!-- HEADER -->
   <header id="navbarMecedes">
-    <nav class="navbar navbar-expand-lg navbar-dark py-0">
-      <div class="col-md-3 col-lg-3 header__left">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="col-5 col-md-3 col-lg-3 header__left">
         <a class="navbar-brand" href="">
           <img class="header__logo-notext mt-3 ml-1" src="./img/logo.svg" alt="">
-          <img class="header__logo-text ml-5 mb-2 align-bottom" src="./img/brand-without-claim.svg" alt="">
+          <img class="header__logo-text ml-4 pb-2 align-bottom" src="./img/brand-without-claim.svg" alt="">
         </a>
       </div>
-      <div class="col-md-9 col-lg-9 header__right">
-        <div class="row header__meta justify-content-end pr-1">
-          <ul class="navbar-nav row1">
+      <div class="col-5 col-md-9 col-lg-9 header__right">
+        <div class="row header__meta justify-content-end">
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <i class="fa fa-info mr-2 align-text-top"></i>
+                <i class="fa fa-info mr-3 align-text-top"></i>
                 <span class="header__meta-text">Provider/Privacy Statement</span>
               </a>
             </li>
@@ -55,7 +53,7 @@
             </li>
           </ul>
         </div>
-        <div class="row header__menu justify-content-end mt-4 collapse navbar-collapse" id="navbarNav">
+        <div class="row header__menu justify-content-end">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">Company</a>
@@ -85,90 +83,331 @@
           <span class="search__icon">
             <i class="fa fa-search"></i>
           </span>
-          <button class="navbar-toggler align-bottom" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
+          <button id="openBtn" class="navbar-toggler align-bottom" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+            onclick="openNav()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <button id="closeBtn" class="navbar-toggler align-bottom" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+            onclick="closeNav()">
+            <span> <i class="fa fa-times"></i></span>
+          </button>
+
+
         </div>
       </div>
-      
     </nav>
   </header>
 
-  <section class="carousel">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="carousel__items item1">
-          <div class="carousel__overlay">
-            <a href="">
-              <h1>Digital World Premiere of the new S-Class.</h1> 
-            </a>
-            <button class="btn-darks">Learn more</button>
-          </div>
+  <!-- -- MENU SIDE -- -->
+  <section class="container-fluid menuSide bg-light">
+    <div id="mySidenav" class="sidenav">
+      <a href="#">Company</a>
+      <a href="#">Vehicle</a>
+      <a href="#">Design</a>
+      <a href="#">Museum & History</a>
+      <a href="#">Sports</a>
+      <a href="#">Events</a>
+      <a href="#">Lifestyle</a>
+      <a href="#">
+        <span class="searchIcon">
+          <i class="fa fa-search"></i>
+        </span>
+        Search
+      </a>
+    </div>
+  </section>
 
+  <!-- MENU RIGHT -->
+  <section class="menuRight">
+    <div class="menuRight__content">
+      <ul class="menuRight__parent">
+        <li class="menuRight__parent-line">
+          <a href="">
+            <i class="fa fa-car icon"></i>
+            <span>Product page</span>
+          </a>
+        </li>
+        <li class="menuRight__parent-line">
+          <a href="">
+            <i class="fa fa-car-crash icon"></i>
+            <span>Configurator</span>
+          </a>
+        </li>
+        <li class="menuRight__parent-line">
+          <a href="">
+            <i class="fa fa-newspaper"></i>
+            <span>Newsletter</span>
+          </a>
+        </li>
+        <li class="menuRight__parent-line">
+          <ul class="menuRight__child">
+            <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a> </li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a> </li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i></a> </li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MENU BOTTOM -->
+  <section class="container-fluid menuBottom">
+
+    <div class="row row_toggle d-flex justify-content-end">
+      <div class="col-3 col-sm-3 pl-1 pr-1 ">
+        <div class="menuBottom__child" id="div_toggle">
+          <ul>
+            <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+            <li><a href=""><i class="fab fa-pinterest"></i></a></li>
+            <li><i class="fab fa-facebook-messenger"></i></li>
+            <li><a href=""><i class="fab fa-viber"></i></a>
+            </li>
+            <li><a href=""><i class="fa fa-envelope"></i></a> </li>
+          </ul>
         </div>
       </div>
-      <div class="item">
-        <div class="carousel__items item2">
-          <div class="carousel__overlay">
-            <a href="">
-              <h1>  The new Mercedes-AMG GT Black Series.</h1> 
-            </a>
-            <button class="btn-darks">Learn more</button>
-          </div>
 
+    </div>
+    <div class="row row_fixed">
+      <div class="col-3 col-sm-3 pl-1 pr-0">
+        <div class="menuBottom__item">
+          <a href="">
+            <i class="fa fa-car icon"></i>
+            <span>Product page</span>
+          </a>
         </div>
       </div>
-      <div class="item">
-        <div class="carousel__items item3">
-          <div class="carousel__overlay">
-            <a href="">
-              <h1>Extensive update for Mercedes-AMG E 63 4MATIC+ Saloon and Estate.</h1> 
-            </a>
-            <button class="btn-darks">Learn more</button>
-          </div>
-
+      <div class="col-3 col-sm-3 pl-1 pr-0">
+        <div class="menuBottom__item">
+          <a href="">
+            <i class="fa fa-car-crash icon"></i>
+            <span>Configuratior</span>
+          </a>
         </div>
       </div>
-      <div class="item">
-        <div class="carousel__items item4">
-          <div class="carousel__overlay">
-            <a href="">
-              <h1> The new E-Class Coupé and Cabriolet. </h1> 
-            </a>
-            <button class="btn-darks">Learn more</button>
-          </div>
-
+      <div class="col-3 col-sm-3 pl-1 pr-0">
+        <div class="menuBottom__item">
+          <a href="">
+            <i class="fa fa-newspaper"></i>
+            <span>Newsletter</span>
+          </a>
         </div>
       </div>
-      <div class="item">
-        <div class="carousel__items item5">
-          <div class="carousel__overlay">
-            <a href="">
-              <h1>Mercedes-Benz design sketches.</h1> 
-            </a>
-            <button class="btn-darks">Learn more</button>
-          </div>
-
+      <div class="col-3 col-sm-3 pl-1 pr-1">
+        <div class="menuBottom__item col_toggle" onclick="bottomMenu()">
+          <!-- <a href=""> -->
+            <i class="fa fa-share-alt"></i>
+            <span>Share</span>
+          <!-- </a> -->
         </div>
       </div>
-      <div class="item">
-        <div class="carousel__items item6">
-          <div class="carousel__overlay">
-            <a href="">
-              <h1> A real alpha woman. </h1> 
-            </a>
-            <button class="btn-darks">Learn more</button>
-          </div>
+    </div>
 
+
+
+  </section>
+
+
+  <!-- CAROUSEL -->
+  <section class="carouselMec">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel__items item1">
+            <div class="carousel__overlay">
+              <a href="">
+                <h1>Digital World Premiere of the new S-Class.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel__text">
+            <div class="carousel__text-items">
+              <a href="">
+                <h1>Digital World Premiere of the new S-Class.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
         </div>
+        <div class="carousel-item">
+          <div class="carousel__items item2">
+            <div class="carousel__overlay">
+              <a href="">
+                <h1>The new Mercedes-AMG GT Black Series.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel__text">
+            <div class="carousel__text-items">
+              <a href="">
+                <h1>The new Mercedes-AMG GT Black Series.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel__items item3">
+            <div class="carousel__overlay">
+              <a href="">
+                <h1>Extensive update for Mercedes-AMG E 63 4MATIC+ Saloon
+                  and Estate.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel__text">
+            <div class="carousel__text-items">
+              <a href="">
+                <h1>Extensive update for Mercedes-AMG E 63 4MATIC+ Saloon and
+                  Estate.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel__items item4">
+            <div class="carousel__overlay">
+              <a href="">
+                <h1> The new E-Class Coupé and Cabriolet. </h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel__text">
+            <div class="carousel__text-items">
+              <a href="">
+                <h1>The new E-Class Coupé and Cabriolet.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel__items item5">
+            <div class="carousel__overlay">
+              <a href="">
+                <h1>Mercedes-Benz design sketches.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel__text">
+            <div class="carousel__text-items">
+              <a href="">
+                <h1>Mercedes-Benz design sketches.</h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel__items item6">
+            <div class="carousel__overlay">
+              <a href="">
+                <h1> A real alpha woman. </h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel__text">
+            <div class="carousel__text-items">
+              <a href="">
+                <h1> A real alpha woman. </h1>
+              </a>
+              <button class="btn-darks">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="search">
+    <div class="container col-10 search__content">
+      <form class="form-inline search__form">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="I am looking for ..." aria-label=""
+            aria-describedby="basic-addon1">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      </form>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="container col-10">
+      <div class="welcome__content">
+        <h2>Welcome to the Mercedes-Benz international website.</h2>
+        <p>Exclusive reports and current films: experience a broad range of topics from the fascinating world of
+          Mercedes-Benz. To find out about offers in your location, please go to the local Mercedes-Benz website.</p>
+        <p>
+          This is the International website of Mercedes-Benz AG.
+          Visitors from the U.S., please visit our U.S. website
+          <a href="">www.mbusa.com.</a>
+        </p>
+        <a href=""><button class="btn-blue"> Bring me to my local website </button></a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="channel">
+    <div class="container col-10">
+      <div class="channel__content row">
+        <div class="col-3 channel__img">
+          <a href="">
+            <img src="./img/intro-01.jpeg" alt="">
+          </a>
+        </div>
+        <div class="col-3 channel__img">
+          <a href="">
+            <img src="./img/intro-02.jpeg" alt="">
+          </a>
+        </div>
+        <div class="col-3 channel__img">
+          <a href="">
+            <img src="./img/intro-03.jpeg" alt="">
+          </a>
+        </div>
+        <div class="col-3 channel__img">
+          <a href="">
+            <img src="./img/intro-04.jpeg" alt="">
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="search"></section>
-  <section class="welcome"></section>
-  <section class="channel"></section>
   <section class="products"></section>
   <section class="about"></section>
   <section class="services"></section>
@@ -190,46 +429,46 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <script type="text/javascript" src="./js/slick.min.js"></script>
+
   <!-- Sroll down hide menu -->
   <script>
     window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
-      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         document.getElementById("navbarMecedes").style.top = "-100px";
       } else {
         document.getElementById("navbarMecedes").style.top = "0";
       }
     }
   </script>
-
- <!-- OWL CAROUSEL && OWL ANIMATION -->
- <script src="./js/owl.carousel.min.js"></script>
-
- <script>
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            dots:false,
-            nav:true,
-        },
-        600:{
-            items:1,
-            dots:false,
-            nav:false
-        },
-        1000:{
-            items:1,
-            dots:false,
-            nav:true
-        }
+  <!-- menu side -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.height = "100%";
+      document.getElementById("mySidenav").style.transform = "translateY(70px)";
+      document.getElementById("openBtn").style.display = "none";
+      document.getElementById("closeBtn").style.display = "block";
     }
-})
- </script>
+    function closeNav() {
+      document.getElementById("mySidenav").style.height = "0";
+      document.getElementById("mySidenav").style.transform = "translateY(0px)";
+      document.getElementById("closeBtn").style.display = "none";
+      document.getElementById("openBtn").style.display = "block";
+    }
+  </script>
+
+
+  <!-- Click show and hide bottom menu -->
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function bottomMenu() {
+      document.getElementById("div_toggle").classList.toggle("show");
+    }
+  </script>
 
 </body>
 

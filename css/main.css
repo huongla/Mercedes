@@ -52,56 +52,93 @@ a:hover {
 }
 
 header {
-  padding-bottom: 12px;
   background: #000000;
 }
 
 header .navbar {
-  align-items: flex-end;
-}
-
-header .navbar .header__right .nav-item {
-  display: inline;
-}
-
-header .navbar .header__right .nav-item a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-header .navbar .header__right .nav-item a i {
-  font-size: 10px;
-  border: 1px solid #fff;
-  padding: 3px 4px;
-  text-align: center;
-}
-
-header .navbar .header__right .nav-item a:hover {
-  color: #00adef;
-}
-
-header .navbar .header__right .nav-item a:hover i {
-  border: 1px solid #00adef;
+  align-items: flex-start;
+  padding: 0 20px 12px 0;
 }
 
 header .navbar .header__right .header__meta {
   margin: 0;
 }
 
-header .navbar .header__right .header__menu {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
+header .navbar .header__right .header__meta .navbar-nav {
+  flex-direction: row;
+  align-self: baseline;
 }
 
-header .navbar .header__right .header__menu .nav-item {
+header .navbar .header__right .header__meta .navbar-nav .nav-item {
+  display: inline;
+}
+
+header .navbar .header__right .header__meta .navbar-nav .nav-item a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+header .navbar .header__right .header__meta .navbar-nav .nav-item a i {
+  font-size: 10px;
+  border: 1px solid #fff;
+  padding: 3px 4px;
+  text-align: center;
+}
+
+header .navbar .header__right .header__meta .navbar-nav .nav-item a:hover {
+  color: #00adef;
+}
+
+header .navbar .header__right .header__meta .navbar-nav .nav-item a:hover i {
+  border: 1px solid #00adef;
+}
+
+header .navbar .header__right .header__menu {
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-right: 12px;
+}
+
+header .navbar .header__right .header__menu .navbar-nav {
+  flex-direction: row;
+  align-self: baseline;
+}
+
+header .navbar .header__right .header__menu .navbar-nav .nav-item {
   margin-left: 25px;
+  display: inline;
+}
+
+header .navbar .header__right .header__menu .navbar-nav .nav-item a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+header .navbar .header__right .header__menu .navbar-nav .nav-item a i {
+  font-size: 10px;
+  border: 1px solid #fff;
+  padding: 3px 4px;
+  text-align: center;
+}
+
+header .navbar .header__right .header__menu .navbar-nav .nav-item a:hover {
+  color: #00adef;
+}
+
+header .navbar .header__right .header__menu .navbar-nav .nav-item a:hover i {
+  border: 1px solid #00adef;
 }
 
 header .navbar .header__right .header__menu .search__icon {
   margin-left: 25px;
+  align-self: center;
   cursor: pointer;
+}
+
+header .navbar .header__right .header__menu .search__icon:hover {
+  color: #00adef;
 }
 
 #navbarMecedes {
@@ -109,115 +146,600 @@ header .navbar .header__right .header__menu .search__icon {
   top: 0px;
   width: 100%;
   display: block;
-  transition: top 0.3s;
-  z-index: 9;
+  transition: top 0.5s;
+  z-index: 99;
 }
 
 @media screen and (max-width: 1280px) {
-  header .header__menu .navbar-nav {
+  header .navbar {
+    padding: 0 0 3px 0;
+  }
+  header .navbar .header__right .header__menu .navbar-nav {
     display: none;
   }
-  header .header__menu .navbar-toggler {
+  header .navbar .header__right .header__menu .navbar-toggler {
     display: inline-block;
+  }
+  header .navbar .header__right .header__menu .navbar-toggler:hover {
+    color: #00adef;
+  }
+  header .navbar .header__right .header__menu button:focus {
+    outline: none;
+  }
+  header .navbar .header__right .header__menu .search__icon {
+    margin-right: 10px;
+    outline: none;
+  }
+  header .navbar #closeBtn {
+    display: none;
+  }
+  header .navbar #closeBtn i {
+    color: #fff;
+    font-size: 16px;
+  }
+  header .navbar #closeBtn i:hover {
+    color: #00adef;
+  }
+  header .navbar-dark .navbar-toggler {
+    border: none;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1020px) {
+  header .navbar {
+    padding: 0 0 3px 0;
+  }
+  header .navbar .header__left {
+    align-items: flex-end;
+  }
+  header .navbar .header__left .navbar-brand {
+    align-items: flex-end;
+  }
   header .navbar .header__left .navbar-brand .header__logo-notext {
+    width: 48px;
+    height: 48px;
+  }
+  header .navbar .header__left .navbar-brand .header__logo-text {
+    width: 119px;
+    height: 30px;
+  }
+  header .navbar .header__right .header__menu {
+    padding-top: 6px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__meta-text {
+    display: none;
+  }
+  .header__left {
+    align-items: flex-end;
+  }
+  .header__left .navbar-brand {
+    align-items: flex-end;
+  }
+  .header__left .navbar-brand .header__logo-notext {
     width: 44px;
     height: 44px;
   }
-  header .navbar .header__left .navbar-brand .header__logo-text {
+  .header__left .navbar-brand .header__logo-text {
     width: 91px;
     height: 23px;
   }
 }
 
-.carousel {
-  position: relative;
-  margin-top: 100px;
+.menuSide {
+  /* The side navigation menu */
+  /* The navigation menu links */
+  /* When you mouse over the navigation links, change their color */
+  /* Position and style the close button (top right corner) */
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 }
 
-.carousel .carousel__items {
-  height: 700px;
+.menuSide .sidenav {
+  width: 100%;
+  /* 100% Full-width */
+  height: 0;
+  /* 0 height - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 18;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #000000;
+  /* Black*/
+  overflow-y: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 80px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.menuSide .sidenav a {
+  text-align: center;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.menuSide .sidenav a:hover {
+  color: #00adef;
+}
+
+.menuSide .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menuSide #main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.menuRight {
+  z-index: 2;
+  position: fixed;
+  right: 0%;
+  top: 32%;
+}
+
+.menuRight .menuRight__content ul {
+  list-style: none;
+}
+
+.menuRight .menuRight__content a {
+  color: #fff;
+}
+
+.menuRight .menuRight__content a i {
+  font-size: 22px;
+}
+
+.menuRight .menuRight__content a span {
+  font-size: 14px;
+  padding-left: 12px;
+}
+
+.menuRight .menuRight__content .menuRight__parent {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.menuRight .menuRight__content .menuRight__parent .menuRight__parent-line {
+  background: #000000;
+  margin-bottom: 2px;
+  padding: 9px;
+  transform: translateX(82%);
+  transition: all 0.5s;
+}
+
+.menuRight .menuRight__content .menuRight__parent .menuRight__parent-line:hover {
+  transform: translateX(0);
+}
+
+.menuRight .menuRight__content .menuRight__parent .menuRight__parent-line .menuRight__child li {
+  display: inline-block;
+  padding: 0 24px 0 0;
+  margin: 0;
+}
+
+.menuRight .menuRight__content .menuRight__parent .menuRight__parent-line .menuRight__child li:last-child {
+  padding: 0;
+}
+
+.menuRight .menuRight__content .menuRight__parent .menuRight__parent-line .menuRight__child li:hover i {
+  color: #00adef;
+}
+
+@media screen and (max-width: 768px) {
+  .menuRight {
+    display: block;
+    bottom: 0;
+    left: 0;
+    top: unset;
+    right: unset;
+  }
+  .menuRight .menuRight__content {
+    display: none;
+  }
+  .menuRight .menuBottom__content {
+    display: flex;
+    width: 100%;
+  }
+  .menuRight .menuBottom__content .menuBottom__child li {
+    list-style: none;
+  }
+  .menuRight .menuBottom__content a {
+    color: #fff;
+    text-align: center;
+  }
+  .menuRight .menuBottom__content a i {
+    font-size: 22px;
+    display: block;
+  }
+  .menuRight .menuBottom__content a span {
+    font-size: 14px;
+    padding-left: 12px;
+    display: block;
+  }
+  .menuRight .menuBottom__content .menuBottom__parent {
+    display: inline-flex;
+  }
+}
+
+.menuBottom {
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.menuBottom a {
+  color: #fff;
+}
+
+.menuBottom a i {
+  font-size: 22px;
+  display: block;
+}
+
+.menuBottom a span {
+  font-size: 10px;
+  padding-left: 12px;
+}
+
+.menuBottom .row_fixed {
+  background-color: #000000;
+  align-items: flex-end;
+}
+
+.menuBottom .row_fixed .menuBottom__item {
+  background-color: #141414;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.menuBottom .row_fixed .col_toggle span {
+  font-size: 10px;
+  padding-left: 12px;
+}
+
+.menuBottom .row_fixed .col_toggle i {
+  font-size: 22px;
+  display: block;
+}
+
+.menuBottom .row_toggle .menuBottom__child {
+  background-color: #141414;
+  text-align: center;
+  transition: 0.5s;
+  border-bottom: 1px solid #000000;
+  display: none;
+}
+
+.menuBottom .row_toggle .menuBottom__child ul {
+  list-style: none;
+  margin: 0;
+}
+
+.menuBottom .row_toggle .menuBottom__child ul li {
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+
+.menuBottom .row_toggle .menuBottom__child ul li a i {
+  font-size: 22px;
+}
+
+.menuBottom .row_toggle .menuBottom__child ul li a:hover i {
+  color: #00adef;
+}
+
+.menuBottom .row_toggle .show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .menuBottom {
+    display: block;
+  }
+}
+
+.carouselMec {
+  position: relative;
+  margin-top: 95px;
+}
+
+.carouselMec .carousel__items {
+  height: 600px;
   background-size: cover;
   background-position: center;
   display: flex;
   position: relative;
 }
 
-.carousel .carousel__items .carousel__overlay {
+.carouselMec .carousel__items .carousel__overlay {
   position: absolute;
-  top: 10%;
+  top: 11%;
   left: 8%;
   width: 43%;
+  display: block;
+  animation: fadeInDown 1.5s ease;
 }
 
-.carousel .carousel__items .carousel__overlay a {
+.carouselMec .carousel__items .carousel__overlay a {
   color: #fff;
 }
 
-.carousel .carousel__items .carousel__overlay a h1 {
-  font-size: 42px;
+.carouselMec .carousel__items .carousel__overlay a h1 {
+  font-size: 40px;
   line-height: 1.5;
   margin-bottom: 14px;
 }
 
-.carousel .item1 {
+.carouselMec .carousel__text {
+  background: #f4f4f4;
+  height: 300px;
+  display: none;
+}
+
+.carouselMec .carousel__text .carousel__text-items {
+  padding-left: 31px;
+  padding-right: 20px;
+  padding-top: 31px;
+  animation: fadeInDown 1.5s ease;
+}
+
+.carouselMec .carousel__text .carousel__text-items a {
+  color: #333;
+}
+
+.carouselMec .carousel__text .carousel__text-items a h1 {
+  font-size: 27px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.carouselMec .item1 {
   background-image: url("../img/carousel-01-3400x1440.jpeg");
 }
 
-.carousel .item2 {
+.carouselMec .item2 {
   background-image: url("../img/carousel-02-3400x1440.jpeg");
 }
 
-.carousel .item3 {
+.carouselMec .item3 {
   background-image: url("../img/carousel-03-3400x1440.jpeg");
 }
 
-.carousel .item4 {
+.carouselMec .item4 {
   background-image: url("../img/carousel-04-3400x1440.jpeg");
 }
 
-.carousel .item5 {
+.carouselMec .item5 {
   background-image: url("../img/carousel-05-3400x1440.jpeg");
 }
 
-.carousel .item6 {
+.carouselMec .item6 {
   background-image: url("../img/carousel-06-3400x1440.jpeg");
 }
 
-.owl-carousel .owl-nav button.owl-prev {
-  font-size: 70px;
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-100%);
-  color: white;
+.carouselMec .carousel-control-next,
+.carouselMec .carousel-control-prev {
+  z-index: 18;
 }
 
-.owl-carousel .owl-nav button.owl-prev:hover {
-  background: none;
+@media screen and (max-width: 1280px) {
+  .carouselMec {
+    margin-top: 85px;
+  }
+  .carouselMec .carousel__items {
+    height: 560px;
+  }
+  .carouselMec .carousel__items .carousel__overlay {
+    top: 15%;
+  }
+  .carouselMec .carousel__items .carousel__overlay a h1 {
+    font-size: 27px;
+  }
 }
 
-.owl-carousel .owl-nav button.owl-prev:focus {
-  outline: none;
+@media screen and (max-width: 1200px) {
+  .carouselMec .carousel__items {
+    height: 500px;
+  }
+  .carouselMec .carousel__items .carousel__overlay a h1 {
+    font-size: 27px;
+  }
 }
 
-.owl-carousel .owl-nav button.owl-next {
-  font-size: 70px;
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-100%);
-  color: white;
+@media screen and (max-width: 1020px) {
+  .carouselMec .carousel__items {
+    height: 450px;
+  }
 }
 
-.owl-carousel .owl-nav button.owl-next:hover {
-  background: none;
+@media screen and (max-width: 768px) {
+  .carouselMec .carousel__items {
+    height: 320px;
+  }
+  .carouselMec .carousel__items .carousel__overlay {
+    display: none;
+  }
+  .carouselMec .carousel__text {
+    display: block;
+  }
+  .carouselMec .carousel .carousel-control-prev,
+  .carouselMec .carousel .carousel-control-next {
+    bottom: 300px;
+  }
 }
 
-.owl-carousel .owl-nav button.owl-next:focus {
-  outline: none;
+@media screen and (max-width: 576px) {
+  .carouselMec .carousel__items {
+    height: 270px;
+  }
+  .carouselMec .carousel__items .carousel__overlay {
+    display: none;
+  }
+  .carouselMec .carousel__text {
+    display: block;
+  }
+  .carouselMec .carousel .carousel-control-prev,
+  .carouselMec .carousel .carousel-control-next {
+    bottom: 320px;
+  }
+}
+
+.search {
+  background: #141414;
+}
+
+.search .search__content {
+  padding-top: 23px;
+  padding-bottom: 31px;
+}
+
+.search .search__content .form-inline {
+  width: 100%;
+}
+
+.search .search__content .form-inline .input-group {
+  width: 100%;
+  padding: 3px;
+  background: #ececec;
+}
+
+.search .search__content .form-inline .input-group .form-control {
+  border: none;
+  background: #ececec;
+}
+
+.search .search__content .form-inline .input-group .form-control:not(:last-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search .search__content .form-inline .input-group .form-control:focus {
+  box-shadow: none;
+}
+
+.search .search__content .form-inline .input-group .input-group-prepend .input-group-text {
+  background: #ececec;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.welcome .container {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.welcome .welcome__content {
+  width: 50%;
+  padding: 31px 0;
+}
+
+.welcome .welcome__content h2,
+.welcome .welcome__content p {
+  margin-bottom: 25px;
+}
+
+.welcome .welcome__content button {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1280px) {
+  .welcome .container .welcome__content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .welcome .container .welcome__content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .welcome .container .welcome__content h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .welcome .container .welcome__content {
+    width: 100%;
+  }
+  .welcome .container .welcome__content h2 {
+    font-size: 22px;
+  }
+  .welcome .container .welcome__content button {
+    width: 100%;
+  }
+}
+
+.channel {
+  padding-top: 60px;
+  padding-bottom: 12px;
+}
+
+.channel .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.channel .container .channel__img {
+  padding: 0 8px;
+}
+
+.channel .container .channel__img a img {
+  width: 100%;
+}
+
+.channel .container .channel__img a:hover::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #00adef;
+  transition: all 0.5s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

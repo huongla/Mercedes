@@ -1,21 +1,43 @@
-.carousel {
+.carouselMec {
     position: relative;
-    margin-top: 100px;
+    margin-top: 95px;
     .carousel__items {
-        height: 700px;
+        height: 600px;
         background-size: cover;
         background-position: center;
         display: flex;
         position: relative;
         .carousel__overlay {
             position: absolute;
-            top: 10%;
+            top: 11%;
             left: 8%;
             width: 43%;
+            display: block;
+            @include animation(fadeInDown, 1.5s, ease);
             a {
                 color: $color-white-0;
                 h1 {
-                    font-size: $fs-5 + 2;
+                    font-size: $fs-5;
+                    line-height: 1.5;
+                    margin-bottom: $mg-1;
+                }
+            }
+        }
+    }
+    .carousel__text {
+        background: $color-white-2;
+        height: 300px;
+        display: none;
+
+        .carousel__text-items {
+            padding-left: $pd-4;
+            padding-right: $pd-3;
+            padding-top: $pd-4;
+            @include animation(fadeInDown, 1.5s, ease);
+            a {
+                color: $color-black-3;
+                h1 {
+                    font-size: $fs-4 + 5;
                     line-height: 1.5;
                     margin-bottom: $mg-1;
                 }
@@ -40,33 +62,85 @@
     .item6 {
         background-image: url("../img/carousel-06-3400x1440.jpeg");
     }
-}
-.owl-carousel .owl-nav button.owl-prev{
-    font-size: 70px;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-100%);
-    color: white;
-    &:hover{
-        background: none;
-    }
-    &:focus{
-        outline: none;
-    }
-}
-.owl-carousel .owl-nav button.owl-next{
-    font-size: 70px;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-100%);
-    color: white;
-    &:hover{
-        background: none;
-    }
-    &:focus{
-        outline: none;
+    .carousel-control-next,
+    .carousel-control-prev {
+        z-index: 18;
     }
 }
 
+//resopnsive
+@include responsive("ex-extra-large") {
+    .carouselMec {
+        margin-top: 85px;
+        .carousel__items {
+            height: 560px;
+            .carousel__overlay {
+                top: 15%;
+                a {
+                    h1 {
+                        font-size: $fs-4 + 5;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive("extra-large") {
+    .carouselMec {
+        .carousel__items {
+            height: 500px;
+            .carousel__overlay {
+                a {
+                    h1 {
+                        font-size: $fs-4 + 5;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive("ex-large") {
+    .carouselMec {
+        .carousel__items {
+            height: 450px;
+        }
+    }
+}
+@include responsive("medium") {
+    .carouselMec {
+        .carousel__items {
+            height: 320px;
+            .carousel__overlay {
+                display: none;
+            }
+        }
+        .carousel__text {
+            display: block;
+        }
+        .carousel {
+            .carousel-control-prev,
+            .carousel-control-next {
+                bottom: 300px;
+            }
+        }
+    }
+}
+@include responsive("small") {
+    .carouselMec {
+        .carousel__items {
+            height: 270px;
+            .carousel__overlay {
+                display: none;
+            }
+        }
+        .carousel__text {
+            display: block;
+        }
+        .carousel {
+            .carousel-control-prev,
+            .carousel-control-next {
+                bottom: 320px;
+            }
+        }
+    }
+}
